@@ -149,7 +149,7 @@
                     <li><a href="/research_example/{{research.slug}}"
                             style="text-decoration:none;color:white">{{research.title}}</a></li>
                     {% endfor %} -->
-                    {% for researchScientist in researchScientists %}
+                    {% for researchScientist in rs %}
                 <li><a href="research_scientists_example/{{researchScientist.slug}}"
                         style="text-decoration:none;color:white">{{researchScientist.title}}</a></li>
                 {% endfor %}
@@ -157,7 +157,7 @@
                     </li>
                     <li class="bar2"><a href="" style="text-decoration:none;color:white">Research Grants</a>
                         <ul class="class3">
-                            {% for researchGrant in researchGrants %}
+                            {% for researchGrant in rg %}
                 <li><a href="research_grants_example/{{researchGrant.slug}}"
                         style="text-decoration:none;color:white">{{researchGrant.title}}</a></li>
                 {% endfor %}
@@ -166,7 +166,7 @@
                     <li class="bar2"><a href="publications" style="text-decoration:none;color:white">Scientific
                             Publications</a>
                         <ul class="class3">
-                            {% for scientificPublication in scientificPublications %}
+                            {% for scientificPublication in rp %}
                 <li><a href="research_publications_example/{{scientificPublication.slug}}"
                         style="text-decoration:none;color:white">{{scientificPublication.title}}</a></li>
                 {% endfor %}
@@ -175,7 +175,7 @@
                     <li class="bar2"><a href="information" style="text-decoration:none;color:white">Information
                             Research</a>
                         <ul class="class3">
-                            {% for informationResearch in informationResearchs %}
+                            {% for informationResearch in ri %}
                 <li><a href="research_information_example/{{informationResearch.slug}}"
                         style="text-decoration:none;color:white">{{informationResearch.title}}</a></li>
                 {% endfor %}
@@ -184,7 +184,7 @@
                     <li class="bar2"><a href="scientific" style="text-decoration:none;color:white">NCPOR Scientific
                             Expeditions</a>
                         <ul class="class3">
-                            {% for scientificExpedition in scientificExpeditions %}
+                            {% for scientificExpedition in se %}
                 <li><a href="scientific_expeditions_example/{{scientificExpedition.slug}}"
                         style="text-decoration:none;color:white">{{scientificExpedition.title}}</a></li>
                 {% endfor %}
