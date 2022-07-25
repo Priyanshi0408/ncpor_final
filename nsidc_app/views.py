@@ -59,13 +59,29 @@ def about_example(request,slug):
 
 # Research
 def research_scientists(request):
-    return render(request, 'research/r_scientists.html')
+    abouts = about.objects.all()
+    context={
+        'ab':abouts
+    }
+    return render(request, 'research/r_scientists.html',context)
 def research_grants(request):
-    return render(request, 'research/research_grants.html')
+    abouts = about.objects.all()
+    context={
+        'ab':abouts
+    }
+    return render(request, 'research/research_grants.html',context)
 def research_publications(request):
-    return render(request, 'research/scientific_publications.html')
+    abouts = about.objects.all()
+    context={
+        'ab':abouts
+    }
+    return render(request, 'research/scientific_publications.html',context)
 def research_information(request):
-    return render(request, 'research/InformationResearch.html')
+    abouts = about.objects.all()
+    context={
+        'ab':abouts
+    }
+    return render(request, 'research/InformationResearch.html',context)
 def scientific_expeditions(request):
     abouts = about.objects.all()
     context={
