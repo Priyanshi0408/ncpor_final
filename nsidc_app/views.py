@@ -153,28 +153,43 @@ def scientific_expeditions(request):
 #     context = {'research':Researchs}
 #     return render(request,'research_example.html',context)
 def research_scientists_example(request,slug):
+    abouts = about.objects.all()
     Researchs = researchScientist.objects.filter(slug=slug).first()
-    context = {'research':Researchs}
+    context = {'research':Researchs,
+                'ab':abouts
+                }
     return render(request,'research/research_scientist_example.html',context)
 
 def research_grants_example(request,slug):
+    abouts = about.objects.all()
     Researchs = researchGrant.objects.filter(slug=slug).first()
-    context = {'research':Researchs}
+    context = {'research':Researchs,
+                'ab':abouts
+                }
     return render(request,'research/research_grant_example.html',context)
 
 def research_publications_example(request,slug):
+    abouts = about.objects.all()
     Researchs = scientificPublication.objects.filter(slug=slug).first()
-    context = {'research':Researchs}
+    context = {'research':Researchs,
+                'ab':abouts
+                }
     return render(request,'research/research_publications_example.html',context)
 
 def research_information_example(request,slug):
+    abouts = about.objects.all()
     Researchs = informationResearch.objects.filter(slug=slug).first()
-    context = {'research':Researchs}
+    context = {'research':Researchs,
+                'ab':abouts
+               }
     return render(request,'research/research_IR_example.html',context)
 
 def scientific_expeditions_example(request,slug):
+    abouts = about.objects.all()
     Researchs = scientificExpedition.objects.filter(slug=slug).first()
-    context = {'research':Researchs}
+    context = {'research':Researchs,
+                'ab':abouts
+                }
     return render(request,'research/research_scientific_example.html',context)
 
 
