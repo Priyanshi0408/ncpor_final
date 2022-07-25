@@ -48,10 +48,16 @@ def about_example(request,slug):
     researchScientists = researchScientist.objects.all()
     About = about.objects.filter(slug=slug).first()
     researchGrants = researchGrant.objects.all()
+    scientificPublications = scientificPublication.objects.all()
+    informationResearchs = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
     context = {'about':About,
                 'ab':abouts,
                 'rs':researchScientists,
-                'rsg':researchGrants
+                'rsg':researchGrants,
+                'sfpb':scientificPublications,
+                'ifrsc':informationResearchs,
+                'expd':scientificExpeditions
                 }
     return render(request,'about_example.html',context)
 
