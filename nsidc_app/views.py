@@ -44,8 +44,15 @@ def home(request):
 #     return render(request,'about.html',context)
 
 def about_example(request,slug):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
     About = about.objects.filter(slug=slug).first()
-    context = {'about':About}
+    researchGrants = researchGrant.objects.all()
+    context = {'about':About,
+                'ab':abouts,
+                'rs':researchScientists,
+                'rsg':researchGrants
+                }
     return render(request,'about_example.html',context)
 
 
@@ -60,7 +67,11 @@ def research_publications(request):
 def research_information(request):
     return render(request, 'research/InformationResearch.html')
 def scientific_expeditions(request):
-    return render(request, 'research/ScientificExpeditions.html')
+    abouts = about.objects.all()
+    context={
+        'ab':abouts
+    }
+    return render(request, 'research/ScientificExpeditions.html',context)
 
 
 
