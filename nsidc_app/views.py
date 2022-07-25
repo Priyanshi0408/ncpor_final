@@ -44,23 +44,106 @@ def home(request):
 #     return render(request,'about.html',context)
 
 def about_example(request,slug):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
     About = about.objects.filter(slug=slug).first()
-    context = {'about':About}
+    researchGrants = researchGrant.objects.all()
+    scientificPublications = scientificPublication.objects.all()
+    informationResearchs = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {'about':About,
+                'ab':abouts,
+                'rs':researchScientists,
+                'rsg':researchGrants,
+                'sfpb':scientificPublications,
+                'ifrsc':informationResearchs,
+                'expd':scientificExpeditions
+                }
     return render(request,'about_example.html',context)
 
 
 
 # Research
 def research_scientists(request):
-    return render(request, 'research/r_scientists.html')
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context={
+        'ab':abouts,
+        'rs':researchScientists,
+        'rg':researchGrants,
+        'rp':researchPublications,
+        'ri':researchInformation,
+        'se':scientificExpeditions
+    }
+    return render(request, 'research/r_scientists.html',context)
 def research_grants(request):
-    return render(request, 'research/research_grants.html')
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context={
+        'ab':abouts,
+        'rs':researchScientists,
+        'rg':researchGrants,
+        'rp':researchPublications,
+        'ri':researchInformation,
+        'se':scientificExpeditions
+    }
+    return render(request, 'research/research_grants.html',context)
 def research_publications(request):
-    return render(request, 'research/scientific_publications.html')
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context={
+        'ab':abouts,
+        'rs':researchScientists,
+        'rg':researchGrants,
+        'rp':researchPublications,
+        'ri':researchInformation,
+        'se':scientificExpeditions
+    }
+    return render(request, 'research/scientific_publications.html',context)
 def research_information(request):
-    return render(request, 'research/InformationResearch.html')
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context={
+        'ab':abouts,
+        'rs':researchScientists,
+        'rg':researchGrants,
+        'rp':researchPublications,
+        'ri':researchInformation,
+        'se':scientificExpeditions
+    }
+    return render(request, 'research/InformationResearch.html',context)
 def scientific_expeditions(request):
-    return render(request, 'research/ScientificExpeditions.html')
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context={
+        'ab':abouts,
+        'rs':researchScientists,
+        'rg':researchGrants,
+        'rp':researchPublications,
+        'ri':researchInformation,
+        'se':scientificExpeditions
+    }
+    return render(request, 'research/ScientificExpeditions.html',context)
 
 
 
@@ -70,30 +153,48 @@ def scientific_expeditions(request):
 #     context = {'research':Researchs}
 #     return render(request,'research_example.html',context)
 def research_scientists_example(request,slug):
+    abouts = about.objects.all()
     Researchs = researchScientist.objects.filter(slug=slug).first()
-    context = {'research':Researchs}
+    context = {'research':Researchs,
+                'ab':abouts
+                }
     return render(request,'research/research_scientist_example.html',context)
 
 def research_grants_example(request,slug):
+    abouts = about.objects.all()
     Researchs = researchGrant.objects.filter(slug=slug).first()
-    context = {'research':Researchs}
+    context = {'research':Researchs,
+                'ab':abouts
+                }
     return render(request,'research/research_grant_example.html',context)
 
 def research_publications_example(request,slug):
+    abouts = about.objects.all()
     Researchs = scientificPublication.objects.filter(slug=slug).first()
-    context = {'research':Researchs}
+    context = {'research':Researchs,
+                'ab':abouts
+                }
     return render(request,'research/research_publications_example.html',context)
 
 def research_information_example(request,slug):
+    abouts = about.objects.all()
     Researchs = informationResearch.objects.filter(slug=slug).first()
-    context = {'research':Researchs}
+    context = {'research':Researchs,
+                'ab':abouts
+               }
     return render(request,'research/research_IR_example.html',context)
 
 def scientific_expeditions_example(request,slug):
+    abouts = about.objects.all()
     Researchs = scientificExpedition.objects.filter(slug=slug).first()
-    context = {'research':Researchs}
+    context = {'research':Researchs,
+                'ab':abouts
+                }
     return render(request,'research/research_scientific_example.html',context)
 
+
+
+# image Dropdown
 def research_exam_slug(request,slug):
     rsres = research_example_down_scientists.objects.filter(slug=slug).first()
     context = {'resrchesg':rsres}
