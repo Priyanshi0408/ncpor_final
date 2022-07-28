@@ -343,8 +343,8 @@ def CorrigendumTable(request):
         'ri': researchInformation,
         'se': scientificExpeditions
     }
-    # return render(request, "tender/CorrigendumTable.html", context)
-    return HttpResponse("fnfjn")
+    return render(request, "tender/CorrigendumTable.html", context)
+    # return HttpResponse("fnfjn")
 def ProcurementTable(request):
     abouts = about.objects.all()
     researchScientists = researchScientist.objects.all()

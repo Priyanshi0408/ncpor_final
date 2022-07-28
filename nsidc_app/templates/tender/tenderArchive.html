@@ -104,12 +104,14 @@
             border: 2px solid cornflowerblue;
             padding: 20px;
         }
-        table,th,td {
-        border: 1px solid black;
+       
+    table td,th{
+        padding:10px;
+        border: 1px solid gray;
+        margin:0px;
+    }
+    table,th,td{
         border-collapse: collapse;
-        padding: 5px;
-        padding-left: 50px;
-        padding-right: 50px;
     }
         th{
             background-color:cornflowerblue;
@@ -341,14 +343,16 @@
                                       <th>Release Date</th>
                                       <th>Closing Date</th>
                                     </tr>
+                                    {% for ab in co %}
                                     <tr>
-                                      <td>Breed Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis quae cupiditate quidem tempore delectus suscipit nulla, voluptates praesentium voluptas, earum pariatur, inventore velit officia! Quam eius eos optio aliquam quasi.</td>
-                                      <td>gfegbfbh</td>
-                                      <td>dsgebhs</td>
-                                      <td>vsdvsb</td>
-                                      <td>mnyyjdhd</td>
-                                      <td>sgrdge</td>
+                                      <td>{{ab.slno}}</td>
+                                      <td>{{ab.tenderno}}</td>
+                                      <td>{{ab.description}}</td>
+                                      <td><a href="{{ab.download}}" target="_blank">{{ab.downloadname}} </a> </td>
+                                      <td>{{ab.releasedate.date}}</td>
+                                      <td>{{ab.closingdate}}</td>
                                     </tr>
+                                    {% endfor %}
                                  </table>
                                  
                             </div>
