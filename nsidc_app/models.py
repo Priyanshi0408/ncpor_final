@@ -1,5 +1,7 @@
 from tkinter import CASCADE
 from django.db import models
+from django.utils import timezone
+
 # Create your models here.
 class about(models.Model):
     title = models.CharField(max_length=200)
@@ -76,6 +78,31 @@ class research_example_down_sp(models.Model):
 
     def __str__(self):
         return self.title
+
+class myclass(models.Model):
+    slno=models.CharField(max_length=2)
+    tenderno=models.CharField(max_length=200)
+    download=models.URLField(blank=True)
+    downloadname=models.CharField(max_length=300,blank=True)
+    description=models.CharField(max_length=300)
+    releasedate=models.DateTimeField(default=timezone.now)
+    closingdate=models.DateField()
+
+    def __str__(self):
+        return self.slno
+    
+class archiveclass(models.Model):
+    slno=models.CharField(max_length=2)
+    tenderno=models.CharField(max_length=200)
+    download=models.URLField(blank=True)
+    downloadname=models.CharField(max_length=300,blank=True)
+    description=models.CharField(max_length=300)
+    releasedate=models.DateTimeField(default=timezone.now)
+    closingdate=models.DateField()
+
+    def __str__(self):
+        return self.slno
+       
 
 # class research_drop(models.Model):
 #     title = models.CharField(max_length=200)

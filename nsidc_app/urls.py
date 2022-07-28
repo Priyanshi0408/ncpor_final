@@ -33,5 +33,18 @@ urlpatterns = [
     path("research/research_example/<str:slug>",views.research_exam_slug,name = 'research_example'),
     path("research/research_grants/<str:slug>",views.research_exam_resgr,name = 'research_example'),
     path("research/research_down_publi/<str:slug>",views.research_exam_public,name = 'research_example'),
+<<<<<<< HEAD
+=======
+    path("tender", views.tender, name="tender"),
+    path("careers", views.careers, name="career"),
+    path("careerArchive", views.careerArchive, name="career"),
+    path("tender/tender", views.tenderTable, name="Tender"),
+    path("tender/corrigendum", views.CorrigendumTable, name="Tender"),
+    path("tender/procurement", views.ProcurementTable, name="Tender"),
+    path("tender/empanelment", views.PanelmentTable, name="Tender"),
+    path("tender/enquiry", views.EnquiryTable, name="Tender"),
+    path("tender/GeM", views.GeMTable, name="Tender"),
+    path("tender/archive", views.tenderArchive, name="Tender"),
+>>>>>>> bb6b17092500141a42065c86c7b192ab0179c092
     
 ]
