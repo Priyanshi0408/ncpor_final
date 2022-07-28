@@ -1,10 +1,14 @@
+from datetime import datetime
+from http.client import HTTPResponse
+from django.forms import DateField
 from django.http import HttpResponse
 from django.shortcuts import render
 from nsidc_app.models import about
+from django.utils import timezone
 
 from nsidc_app.models import informationResearch
 from nsidc_app.models import researchScientist
-from nsidc_app.models import researchGrant
+from nsidc_app.models import researchGrant, myclass, archiveclass
 from nsidc_app.models import scientificPublication, research_example_down_sp
 from nsidc_app.models import scientificExpedition, research_example_down_scientists, research_example_down_resgran
 
@@ -284,3 +288,179 @@ def research_exam_public(request, slug):
 #     Researchs_Drops = research_drop.objects.filter(slug=slug,slug_drop=slug_drop).first()
 #     context = {'research_drop':Researchs_Drops}
 #     return render(request,'research_drop.html',context)(drop-dowm-->dropdowm through cms / made by priyanshi)
+
+def tender(request):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, 'tender.html', context)
+    # return HttpResponse("hello")
+
+
+def tenderTable(request):
+    c=myclass.objects.all()
+    cd=c.exclude(closingdate__lte=datetime.today())
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'co':cd,
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, "tender/tenderTable.html", context)
+
+def CorrigendumTable(request):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, "tender/CorrigendumTable.html", context)
+def ProcurementTable(request):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, "tender/ProcurementTable.html", context)
+def PanelmentTable(request):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, "tender/PanelmentTable.html", context)
+def EnquiryTable(request):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, "tender/EnquiryTable.html", context)
+def GeMTable(request):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, "tender/GeMTable.html", context)
+
+def tenderArchive(request):
+    c=myclass.objects.filter(closingdate__lte=datetime.today())
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'co':c,
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, "tender/tenderArchive.html", context)
+
+
+# career
+def careers(request):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, "career.html", context)
+
+def careerArchive(request):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, "careerArchive.html", context)
+
