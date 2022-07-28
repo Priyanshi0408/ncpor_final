@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-from http.client import HTTPResponse
-=======
 from datetime import datetime
 from http.client import HTTPResponse
 from django.forms import DateField
->>>>>>> bb6b17092500141a42065c86c7b192ab0179c092
 from django.http import HttpResponse
 from django.shortcuts import render
 from nsidc_app.models import about
