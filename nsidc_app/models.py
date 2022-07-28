@@ -81,7 +81,7 @@ class research_example_down_sp(models.Model):
 
 class myclass(models.Model):
     slno=models.CharField(max_length=2)
-    tenderno=models.CharField(max_length=200)
+    tenderno=models.CharField(max_length=500)
     download=models.URLField(blank=True)
     downloadname=models.CharField(max_length=300,blank=True)
     description=models.CharField(max_length=300)
