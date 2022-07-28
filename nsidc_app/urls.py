@@ -42,6 +42,6 @@ urlpatterns = [
     path("tender/empanelment", views.PanelmentTable, name="Tender"),
     path("tender/enquiry", views.EnquiryTable, name="Tender"),
     path("tender/GeM", views.GeMTable, name="Tender"),
-    path("tender/archive", views.tenderArchive, name="Tender"),
+    path("tender/archive", views.tenderArchive, name="Tender")
     
 ]
