@@ -87,3 +87,5 @@ class research_example_down_sp(models.Model):
 #         return self.title
 #     (drop-dowm-->dropdowm through cms / made by priyanshi)
 
+###########tendor page ###############
+
