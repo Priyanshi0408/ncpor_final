@@ -114,3 +114,5 @@ class archiveclass(models.Model):
 #         return self.title
 #     (drop-dowm-->dropdowm through cms / made by priyanshi)
 
+###########tendor page ###############
+
