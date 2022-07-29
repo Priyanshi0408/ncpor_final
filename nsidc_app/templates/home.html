@@ -111,6 +111,24 @@
             list-style:none;
             
         }
+        .class{
+            {% comment %} border:2px solid red; {% endcomment %}
+            width:1900px;
+            {% comment %} display:inline; {% endcomment %}
+            {% comment %} height:100px; {% endcomment %}
+            {% comment %} padding-right:100px; {% endcomment %}
+            margin-right:-1000px;
+            {% comment %} margin-bottom:200px; {% endcomment %}
+        }
+        .class a{
+            {% comment %} border:2px solid white; {% endcomment %}
+            {% comment %} padding-right:100px; {% endcomment %}
+            width:900px;
+            {% comment %} margin-top:100px; {% endcomment %}
+            {% comment %} padding-bottom:10px; {% endcomment %}
+            font-size:22px;
+            {% comment %} margin-right:200px; {% endcomment %}
+        }
         .class11 li+li {
             margin-top: 10px;
             margin-bottom:15px;
@@ -163,10 +181,22 @@
             {% comment %} border:2px solid red;
             border-radius:100%; {% endcomment %}
             {% comment %} margin-left:100px; {% endcomment %}
-            padding-left:20px;
+            padding-left:60px;
             {% comment %} padding:10px; {% endcomment %}
         }
-    </style>
+.ima1{
+    {% comment %} height:60px; {% endcomment %}
+    {% comment %} margin-top:-20px; {% endcomment %}
+    {% comment %} margin-left:100px; {% endcomment %}
+    {% comment %} border:2px solid red; {% endcomment %}
+    {% comment %} margin-left:80px; {% endcomment %}
+    width:50px;
+    margin-top:2px;
+    margin-right:-300px;
+    margin-left:30px;
+} 
+
+</style>
 
 </head>
 
@@ -177,9 +207,14 @@
                 <!-- <ul> -->
                 <a href="/"><img class="im1" src="{% static 'images/icon.png' %}" alt=""
                         style="margin-left: -50px; height: 80px; margin-top: 0px;"></a>
-                <li class="b class" style="font-size: 31px;margin-top: -1px;"><a href="/"
+                <li class="b class"><a href="/"
                         style="text-decoration:none;color:white">National Centre for Polar and Ocean Research </a></li>
+                        {% comment %} <div class="navele"> {% endcomment %}
+                {% comment %} <li> {% endcomment %}
+                    <a href="/"><img class="ima1" src="static/images/home3.png" alt=""></a>
+                {% comment %} </li> {% endcomment %}
                 <li class="b bar" style="padding:0px;margin-left:100px;">
+                <li class="b bar" style="padding:0px;margin-left:-10px;">
                     <a href="/" style="text-decoration:none;color:white;font-size:18px;">About</a>
                     {% comment %} <div class="dropdown4 about_dd" style="margin-left: -833px;">
                         <div class="about1 ss1 ">
@@ -258,9 +293,12 @@
                         {% endfor %}
                     </ul>
                 </li>
+                <li class="b bar" style="padding:0px;">
+                    <a href="news" style="text-decoration:none;color:white;font-size:18px;">News</a>
+                </li>
 
-                <li class="b bar" style="padding:0px;padding-left:5px;">
-                    <a href="/" style="text-decoration:none;color:white;font-size:18px;">Research</a>
+                <li class="b bar" style="padding:0px;padding-left:5px; margin-left: 0px;">
+                    <a href="/" style="text-decoration:none;color:white;font-size:18px;margin-right:-10px;">Research</a>
                     {% comment %} <div class="dropdown2 dd_2" style="margin-left: -937px;">
                         <div class="l">
                             <figure class="sp">
@@ -314,7 +352,7 @@
 
                     <ul class="drop class2">
                         <li class="bar2"><a href="research/scientists"
-                                style="text-decoration:none;color:white">Scientists</a>
+                                style="text-decoration:none;color:white;">Scientists</a>
                             <ul class="class3">
                                 <!-- {% for research in researchs %}
                         <li><a href="/research_example/{{research.slug}}"
@@ -327,7 +365,7 @@
                     {% endfor %}
                             </ul>
                         </li>
-                        <li class="bar2"><a href="research/research" style="text-decoration:none;color:white">Research Grants</a>
+                        <li class="bar2"><a href="research/research" style="text-decoration:none;color:white;">Research Grants</a>
                             <ul class="class3">
                                 {% for researchGrant in researchGrants %}
                     <li><a href="research_grants_example/{{researchGrant.slug}}"
@@ -335,7 +373,7 @@
                     {% endfor %}
                             </ul>
                         </li>
-                        <li class="bar2"><a href="research/publications" style="text-decoration:none;color:white">Scientific
+                        <li class="bar2"><a href="research/publications" style="text-decoration:none;color:white;">Scientific
                                 Publications</a>
                             <ul class="class3">
                                 {% for scientificPublication in scientificPublications %}
@@ -344,7 +382,7 @@
                     {% endfor %}
                             </ul>
                         </li>
-                        <li class="bar2"><a href="research/information" style="text-decoration:none;color:white">Information
+                        <li class="bar2"><a href="research/information" style="text-decoration:none;color:white;">Information
                                 Research</a>
                             <ul class="class3">
                                 {% for informationResearch in informationResearchs %}
@@ -353,7 +391,7 @@
                     {% endfor %}
                             </ul>
                         </li>
-                        <li class="bar2"><a href="research/scientific" style="text-decoration:none;color:white">NCPOR Scientific
+                        <li class="bar2"><a href="research/scientific" style="text-decoration:none;color:white;">NCPOR Scientific
                                 Expeditions</a>
                             <ul class="class3">
                                 {% for scientificExpedition in scientificExpeditions %}
@@ -365,15 +403,19 @@
                     </ul>
 
                 </li>
-                <li class="b bar" style="padding:0px;margin-right:50px;">
-                    <a href="tender/" style="text-decoration:none;color:white;font-size:18px;">Tender</a>
+                <li class="b bar" style="padding:0px;margin-left:20px;">
+                    <a href="careers" style="text-decoration:none;color:white;font-size:18px;margin-right:-5px;">Careers</a>
                 </li>
-                <li class="b bar" style="padding:0px;margin-left:-30px;">
-                    <a href="careers" style="text-decoration:none;color:white;font-size:18px;">Careers</a>
+                <li class="b bar" style="padding:0px;margin-left:10px;">
+                    <a href="tender/" style="text-decoration:none;color:white;font-size:18px;margin-right:-20px;">Tender</a>
+                </li>
+                
+                <li class="b bar" style="padding:0px;margin-left:25px;">
+                    <a href="webMail" style="text-decoration:none;color:white;font-size:18px;">Webmail</a>
                 </li>
 
-
-                <!-- </ul> -->
+            {% comment %} </div> {% endcomment %}
+                {% comment %} </ul>  {% endcomment %}
             </div>
 
             <div class="back" id="slideshow">

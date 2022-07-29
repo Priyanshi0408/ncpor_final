@@ -497,3 +497,36 @@ def careerArchive(request):
     }
     return render(request, "careerArchive.html", context)
 
+# Webmail
+def webMail(request):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, "webMail.html", context)
+def news(request):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions
+    }
+    return render(request, "news.html", context)
