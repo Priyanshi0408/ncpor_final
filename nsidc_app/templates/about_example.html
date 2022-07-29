@@ -27,7 +27,7 @@
             width: 900px;
             padding-top: 0px;
             padding-bottom: 0px;
-            background-color: steelblue;
+            border:2px solid red;
         }
 
         .bar:hover .class2 {
@@ -81,6 +81,21 @@
             padding-bottom: 0px;
             background-color: steelblue;
         }
+        .navbar{
+            height:100px;
+        }
+        .class{
+            {% comment %} border:2px solid red; {% endcomment %}
+            {% comment %} margin-left:-100px; {% endcomment %}
+            {% comment %} margin-right:200px; {% endcomment %}
+            height:50px;
+        }
+        .class a{
+            {% comment %} border:2px solid white; {% endcomment %}
+        }
+        .class:hover{
+            height:100px;
+        }
     </style>
 
 </head>
@@ -88,14 +103,17 @@
 <body>
     <div class="bfull">
         <div class="full">
-            <div class="navbar">
+            <div class="navbar" >
                 <!-- <ul> -->
                 <a href="/"><img class="im1" src="{% static 'images/icon.png' %}" alt=""
-                        style="margin-left: -20px; height: 80px; margin-top: 0px;"></a>
-                <li class="b class" style="font-size: 31px;margin-top: -1px;"><a href="/"
-                        style="text-decoration:none;color:white">National Centre for Polar and Ocean Research </a></li>
+                        style="margin-left: -100px; height:70px; margin-top: 0px;margin-right:0px;"></a>
+                <li class="b class" style="font-size: 25px;margin-top: -1px;"><a href="/"
+                        style="text-decoration:none;color:white;">National Centre for Polar and Ocean Research </a></li>
                 <li class="b bar" style="padding:0px;">
-                    <a href="" style="text-decoration:none;color:white;font-size:18px;">About</a>
+                    <li>
+                        <a href="/"><img class="ima1" style="height:50px;margin-top:-10px;" src="/static/images/home3.png" alt=""></a>
+                    </li>
+                    <a href="" style="text-decoration:none;color:white;font-size:18px;margin-top:5px;border:2px solid red;height:20px; margin-right:10px;">About</a>
 
                     <ul class="drop class1">
                         {% comment %} <li><a href="about/jobs" style="text-decoration:none;color:white;">Jobs</a></li>
@@ -188,7 +206,7 @@
                 </li>
                 
                 <li class="b bar" style="padding:0px;">
-                    <a href="/webMail" style="text-decoration:none;color:white;font-size:18px;">Webmail</a>
+                    <a href="/webMail" style="text-decoration:none;color:white;font-size:18px;margin-right:-100px;">Webmail</a>
                 </li>
                 <!-- </ul> -->
             </div>
