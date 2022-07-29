@@ -91,7 +91,7 @@ class myclass(models.Model):
     def __str__(self):
         return self.slno
     
-class archiveclass(models.Model):
+class corigendumclass(models.Model):
     slno=models.CharField(max_length=2)
     tenderno=models.CharField(max_length=200)
     download=models.URLField(blank=True)
@@ -102,7 +102,64 @@ class archiveclass(models.Model):
 
     def __str__(self):
         return self.slno
-       
+class gemclass(models.Model):
+    slno=models.CharField(max_length=2)
+    tenderno=models.CharField(max_length=200)
+    download=models.URLField(blank=True)
+    downloadname=models.CharField(max_length=300,blank=True)
+    description=models.CharField(max_length=300)
+    releasedate=models.DateTimeField(default=timezone.now)
+    closingdate=models.DateField()
+
+    def __str__(self):
+        return self.slno
+class procurementclass(models.Model):
+    slno=models.CharField(max_length=2)
+    tenderno=models.CharField(max_length=200)
+    download=models.URLField(blank=True)
+    downloadname=models.CharField(max_length=300,blank=True)
+    description=models.CharField(max_length=300)
+    releasedate=models.DateTimeField(default=timezone.now)
+    closingdate=models.DateField()
+
+    def __str__(self):
+        return self.slno
+
+class panelmentclass(models.Model):
+    slno=models.CharField(max_length=2)
+    tenderno=models.CharField(max_length=200)
+    download=models.URLField(blank=True)
+    downloadname=models.CharField(max_length=300,blank=True)
+    description=models.CharField(max_length=300)
+    releasedate=models.DateTimeField(default=timezone.now)
+    closingdate=models.DateField()
+
+    def __str__(self):
+        return self.slno
+
+class enquiryclass(models.Model):
+    slno=models.CharField(max_length=2)
+    tenderno=models.CharField(max_length=200)
+    download=models.URLField(blank=True)
+    downloadname=models.CharField(max_length=300,blank=True)
+    description=models.CharField(max_length=300)
+    releasedate=models.DateTimeField(default=timezone.now)
+    closingdate=models.DateField()
+
+    def __str__(self):
+        return self.slno
+
+class careerclass(models.Model):
+    slno=models.CharField(max_length=2)
+    tenderno=models.CharField(max_length=200)
+    download=models.URLField(blank=True)
+    downloadname=models.CharField(max_length=300,blank=True)
+    description=models.CharField(max_length=300)
+    releasedate=models.DateTimeField(default=timezone.now)
+    closingdate=models.DateField()
+
+    def __str__(self):
+        return self.slno
 
 # class research_drop(models.Model):
 #     title = models.CharField(max_length=200)

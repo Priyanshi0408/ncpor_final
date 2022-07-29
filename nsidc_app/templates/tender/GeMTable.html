@@ -263,14 +263,16 @@
                                       <th>Release Date</th>
                                       <th>Closing Date</th>
                                     </tr>
-                                    <tr>
-                                      <td>Breed Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis quae cupiditate quidem tempore delectus suscipit nulla, voluptates praesentium voluptas, earum pariatur, inventore velit officia! Quam eius eos optio aliquam quasi.</td>
-                                      <td>gfegbfbh</td>
-                                      <td>dsgebhs</td>
-                                      <td>vsdvsb</td>
-                                      <td>mnyyjdhd</td>
-                                      <td>sgrdge</td>
-                                    </tr>
+                                    {% for sln in co %}
+                                        <tr>
+                                            <td>{{sln.slno}}</td>
+                                            <td>{{sln.tenderno}} </td>
+                                            <td>{{sln.description}}</td>
+                                            <td><a href="{{sln.download}}" target="_blank">{{sln.downloadname}}</a> </td>
+                                            <td>{{sln.releasedate.date}}</td>
+                                            <td>{{sln.closingdate}}</td>
+                                        </tr>
+                                        {% endfor %}
                                  </table>
                                  
                             </div>
