@@ -5,7 +5,9 @@ from nsidc_app.models import about
 
 from nsidc_app.models import informationResearch
 from nsidc_app.models import researchScientist
-from nsidc_app.models import researchGrant, myclass, archiveclass
+from nsidc_app.models import researchGrant, myclass,gemclass,procurementclass,panelmentclass
+from nsidc_app.models import enquiryclass,corigendumclass
+from nsidc_app.models import careerclass
 from nsidc_app.models import scientificPublication, research_example_down_sp
 from nsidc_app.models import scientificExpedition,research_example_down_scientists, research_example_down_resgran
 
@@ -34,7 +36,12 @@ admin.site.register(research_example_down_scientists,BlogAdmin)
 admin.site.register(research_example_down_resgran,BlogAdmin)
 admin.site.register(research_example_down_sp,BlogAdmin)
 admin.site.register(myclass)
-admin.site.register(archiveclass)
+admin.site.register(corigendumclass)
+admin.site.register(panelmentclass)
+admin.site.register(procurementclass)
+admin.site.register(gemclass)
+admin.site.register(enquiryclass)
+admin.site.register(careerclass)
 
 
 
