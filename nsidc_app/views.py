@@ -8,7 +8,9 @@ from django.utils import timezone
 
 from nsidc_app.models import informationResearch
 from nsidc_app.models import researchScientist
-from nsidc_app.models import researchGrant, myclass, archiveclass
+from nsidc_app.models import researchGrant, myclass,gemclass,procurementclass,panelmentclass
+from nsidc_app.models import enquiryclass,corigendumclass
+from nsidc_app.models import careerclass
 from nsidc_app.models import scientificPublication, research_example_down_sp
 from nsidc_app.models import scientificExpedition, research_example_down_scientists, research_example_down_resgran
 
@@ -329,6 +331,8 @@ def tenderTable(request):
     return render(request, "tender/tenderTable.html", context)
 
 def CorrigendumTable(request):
+    c=corigendumclass.objects.all()
+    cd=c.exclude(closingdate__lte=datetime.today())
     abouts = about.objects.all()
     researchScientists = researchScientist.objects.all()
     researchGrants = researchGrant.objects.all()
@@ -336,6 +340,7 @@ def CorrigendumTable(request):
     researchInformation = informationResearch.objects.all()
     scientificExpeditions = scientificExpedition.objects.all()
     context = {
+        'co':cd,
         'ab': abouts,
         'rs': researchScientists,
         'rg': researchGrants,
@@ -346,6 +351,8 @@ def CorrigendumTable(request):
     return render(request, "tender/CorrigendumTable.html", context)
     # return HttpResponse("fnfjn")
 def ProcurementTable(request):
+    c=procurementclass.objects.all()
+    cd=c.exclude(closingdate__lte=datetime.today())
     abouts = about.objects.all()
     researchScientists = researchScientist.objects.all()
     researchGrants = researchGrant.objects.all()
@@ -353,6 +360,7 @@ def ProcurementTable(request):
     researchInformation = informationResearch.objects.all()
     scientificExpeditions = scientificExpedition.objects.all()
     context = {
+        'co':cd,
         'ab': abouts,
         'rs': researchScientists,
         'rg': researchGrants,
@@ -362,6 +370,8 @@ def ProcurementTable(request):
     }
     return render(request, "tender/ProcurementTable.html", context)
 def PanelmentTable(request):
+    c=panelmentclass.objects.all()
+    cd=c.exclude(closingdate__lte=datetime.today())
     abouts = about.objects.all()
     researchScientists = researchScientist.objects.all()
     researchGrants = researchGrant.objects.all()
@@ -369,6 +379,7 @@ def PanelmentTable(request):
     researchInformation = informationResearch.objects.all()
     scientificExpeditions = scientificExpedition.objects.all()
     context = {
+        'co':cd,
         'ab': abouts,
         'rs': researchScientists,
         'rg': researchGrants,
@@ -378,6 +389,8 @@ def PanelmentTable(request):
     }
     return render(request, "tender/PanelmentTable.html", context)
 def EnquiryTable(request):
+    c=enquiryclass.objects.all()
+    cd=c.exclude(closingdate__lte=datetime.today())
     abouts = about.objects.all()
     researchScientists = researchScientist.objects.all()
     researchGrants = researchGrant.objects.all()
@@ -385,6 +398,7 @@ def EnquiryTable(request):
     researchInformation = informationResearch.objects.all()
     scientificExpeditions = scientificExpedition.objects.all()
     context = {
+        'co':cd,
         'ab': abouts,
         'rs': researchScientists,
         'rg': researchGrants,
@@ -394,6 +408,8 @@ def EnquiryTable(request):
     }
     return render(request, "tender/EnquiryTable.html", context)
 def GeMTable(request):
+    c=gemclass.objects.all()
+    cd=c.exclude(closingdate__lte=datetime.today())
     abouts = about.objects.all()
     researchScientists = researchScientist.objects.all()
     researchGrants = researchGrant.objects.all()
@@ -401,6 +417,7 @@ def GeMTable(request):
     researchInformation = informationResearch.objects.all()
     scientificExpeditions = scientificExpedition.objects.all()
     context = {
+        'co':cd,
         'ab': abouts,
         'rs': researchScientists,
         'rg': researchGrants,
@@ -411,7 +428,12 @@ def GeMTable(request):
     return render(request, "tender/GeMTable.html", context)
 
 def tenderArchive(request):
-    c=myclass.objects.filter(closingdate__lte=datetime.today())
+    c1=myclass.objects.filter(closingdate__lte=datetime.today())
+    c2=corigendumclass.objects.filter(closingdate__lte=datetime.today())
+    c3=panelmentclass.objects.filter(closingdate__lte=datetime.today())
+    c4=procurementclass.objects.filter(closingdate__lte=datetime.today())
+    c5=gemclass.objects.filter(closingdate__lte=datetime.today())
+    c6 = enquiryclass.objects.filter(closingdate__lte=datetime.today())
     abouts = about.objects.all()
     researchScientists = researchScientist.objects.all()
     researchGrants = researchGrant.objects.all()
@@ -419,7 +441,12 @@ def tenderArchive(request):
     researchInformation = informationResearch.objects.all()
     scientificExpeditions = scientificExpedition.objects.all()
     context = {
-        'co':c,
+        'co1':c1,
+        'co2':c2,
+        'co3':c3,
+        'co4':c4,
+        'co5':c5,
+        'co6':c6,
         'ab': abouts,
         'rs': researchScientists,
         'rg': researchGrants,
@@ -432,6 +459,8 @@ def tenderArchive(request):
 
 # career
 def careers(request):
+    c=careerclass.objects.all()
+    cd=c.exclude(closingdate__lte=datetime.today())
     abouts = about.objects.all()
     researchScientists = researchScientist.objects.all()
     researchGrants = researchGrant.objects.all()
@@ -439,6 +468,7 @@ def careers(request):
     researchInformation = informationResearch.objects.all()
     scientificExpeditions = scientificExpedition.objects.all()
     context = {
+        'co':cd,
         'ab': abouts,
         'rs': researchScientists,
         'rg': researchGrants,
@@ -449,6 +479,7 @@ def careers(request):
     return render(request, "career.html", context)
 
 def careerArchive(request):
+    c = careerclass.objects.filter(closingdate__lte=datetime.today())
     abouts = about.objects.all()
     researchScientists = researchScientist.objects.all()
     researchGrants = researchGrant.objects.all()
@@ -456,6 +487,7 @@ def careerArchive(request):
     researchInformation = informationResearch.objects.all()
     scientificExpeditions = scientificExpedition.objects.all()
     context = {
+        'co':c,
         'ab': abouts,
         'rs': researchScientists,
         'rg': researchGrants,

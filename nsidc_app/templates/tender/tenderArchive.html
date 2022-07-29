@@ -349,7 +349,57 @@
                                       <th>Release Date</th>
                                       <th>Closing Date</th>
                                     </tr>
-                                    {% for ab in co %}
+                                    {% for ab in co1 %}
+                                    <tr>
+                                      <td>{{ab.slno}}</td>
+                                      <td>{{ab.tenderno}}</td>
+                                      <td>{{ab.description}}</td>
+                                      <td><a href="{{ab.download}}" target="_blank">{{ab.downloadname}} </a> </td>
+                                      <td>{{ab.releasedate.date}}</td>
+                                      <td>{{ab.closingdate}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% for ab in co2 %}
+                                    <tr>
+                                      <td>{{ab.slno}}</td>
+                                      <td>{{ab.tenderno}}</td>
+                                      <td>{{ab.description}}</td>
+                                      <td><a href="{{ab.download}}" target="_blank">{{ab.downloadname}} </a> </td>
+                                      <td>{{ab.releasedate.date}}</td>
+                                      <td>{{ab.closingdate}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% for ab in co3 %}
+                                    <tr>
+                                      <td>{{ab.slno}}</td>
+                                      <td>{{ab.tenderno}}</td>
+                                      <td>{{ab.description}}</td>
+                                      <td><a href="{{ab.download}}" target="_blank">{{ab.downloadname}} </a> </td>
+                                      <td>{{ab.releasedate.date}}</td>
+                                      <td>{{ab.closingdate}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% for ab in co4 %}
+                                    <tr>
+                                      <td>{{ab.slno}}</td>
+                                      <td>{{ab.tenderno}}</td>
+                                      <td>{{ab.description}}</td>
+                                      <td><a href="{{ab.download}}" target="_blank">{{ab.downloadname}} </a> </td>
+                                      <td>{{ab.releasedate.date}}</td>
+                                      <td>{{ab.closingdate}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% for ab in co5 %}
+                                    <tr>
+                                      <td>{{ab.slno}}</td>
+                                      <td>{{ab.tenderno}}</td>
+                                      <td>{{ab.description}}</td>
+                                      <td><a href="{{ab.download}}" target="_blank">{{ab.downloadname}} </a> </td>
+                                      <td>{{ab.releasedate.date}}</td>
+                                      <td>{{ab.closingdate}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% for ab in co6 %}
                                     <tr>
                                       <td>{{ab.slno}}</td>
                                       <td>{{ab.tenderno}}</td>
