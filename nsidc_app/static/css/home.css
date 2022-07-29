@@ -14,7 +14,7 @@ body{background-color: rgb(129, 193, 233);}
 .navbar li{
     color: white;
     list-style: none;
-    margin: 10px;
+    margin: 5px;
     padding: 15px; 
 }
  
@@ -206,6 +206,7 @@ body{background-color: rgb(129, 193, 233);}
 }
 .b:hover{
     background-color: rgb(26, 76, 121);
+    height : 80px;
 }
 .back img{
     height: 400px;
