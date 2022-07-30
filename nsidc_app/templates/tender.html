@@ -100,11 +100,18 @@
             width: 50px;
             margin-top: 2px;
             /* margin-right: -500px; */
-            margin-left: 30px;
+            margin-left: -40px;
             margin-top: -18px;
         }
         .b:hover{
             height: 30px;
+        }
+        .cl1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-left: 100px;
+            margin-top: 6px;
         }
     </style>
 
@@ -116,10 +123,11 @@
             <div class="navbar" style="height: 80px;">
                 <!-- <ul> -->
                 <a href="/"><img class="im1" src="{% static 'images/icon.png' %}" alt=""
-                    style="margin-left: 0px; height: 70px; margin-top: 3px;"></a>
+                    style="margin-left: -30px;height: 70px; margin-top: 3px;"></a>
                 <li class="b class" style="font-size: 23px;margin-top: 2px;"><a href="/"
                         style="text-decoration:none;color:white">National Centre for Polar and Ocean Research</a> </li>
-                <li><a href="/"><img class="ima1" src="/static/images/home3.png" alt=""></a></li>
+                <ul class="cl1">
+                    <li><a href="/"><img class="ima1" src="/static/images/home3.png" alt=""></a></li>
                 <li class="b bar" style="padding:0px;">
                     <a href="" style="text-decoration:none;color:white;font-size:18px;">About</a>
 
@@ -244,6 +252,7 @@
                     <a href="/webMail" style="text-decoration:none;color:white;font-size:18px;">Webmail</a>
                 </li>
                 
+                </ul>
                 <!-- </ul> -->
             </div>
             <div class="pg">
