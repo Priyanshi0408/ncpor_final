@@ -455,11 +455,11 @@
                         <img src="{% static 'images/UniversityOfCB.png' %}" alt="UniversityOfCB"
                             style="height: 90px; width: 90px;">
                     </a> {% endcomment %}
-                    <div class="par" style="margin-top:30px;">
+                    <div class="par" style="margin-top:50px;">
                         {% comment %} <p class="par1" style="color:black">{% endcomment %}
-                        <h2 style="display:inline;margin-left:-50px;">Welcome to NCPOR</h2>
+                        <h2 style="display:inline;margin-left:-40px;">Welcome to NCPOR</h2>
 
-                        <p class="par2" style="color:darkslategray;text-align:justify;">
+                        <p class="par2" style="width:210%;color:darkslategray;text-align:justify;">
                             National Centre for Polar and Ocean Research (NCPOR) is India’s premier R&D institution
                             responsible for the country’s research activities in the polar and Southern Ocean
                             realms.Lead role in the geoscientific surveys of the country’s EEZ and its extended
@@ -479,32 +479,33 @@
                         <img src="{% static 'images/NSF.jpg' %}" alt="NSF">
                     </a> {% endcomment %}
                 </div>
+                <div class="str ev" style="height:20px;text-align:center;"><h2 style="margin-left:280px;padding-bottom:10px;margin-top:-5px;">OUR RESEARCH</h2></div>
                 <div class="ev">
                     <div class="in">
                         <img src="{% static 'images/asina.jpg' %}" alt="asina" style="width:220px;">
                         <a href="#" style="text-decoration: none">
-                            <h3>Arctic Sea Ice News & Analysis</h3>
+                            <h3>Polar Science and Cryosphere</h3>
                         </a>
                         <p>Scientific analysis of Arctic sea ice conditions plus daily images</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/eloka-image(1).jpg' %}" alt="eloka-image" style="width:220px;">
                         <a href="#" style="text-decoration: none">
-                            <h3>ELOKA</h3>
+                            <h3>Atmosphere, Ice and Climate</h3>
                         </a>
                         <p>Working together to understand the changing Arctic system</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/snow-today.jpg' %}" alt="snow-today" style="width:220px;">
                         <a href="#" style="text-decoration: none">
-                            <h3>Snow Today</h3>
+                            <h3>Geosciences</h3>
                         </a>
                         <p>Scientific analysis of snow conditions in the Western United States plus daily images</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/daac-image.jpg' %}" alt="daac-image" style="width:220px;">
                         <a href="#" style="text-decoration: none">
-                            <h3>The NASA DAAC at NSIDC</h3>
+                            <h3>Polar Oceans / Oceanography</h3>
                         </a>
 
                         <p>NASA Earth science data on snow, ice, cryosphere, and climate</p>
@@ -512,7 +513,7 @@
                     <div class="in">
                         <img src="{% static 'images/cryosphere-image.jpg' %}" alt="cryosphere" style="width:220px;">
                         <a href="#" style="text-decoration: none">
-                            <h3>Visit the Cryosphere</h3>
+                            <h3>Polar Environments, Atmosphere</h3>
                         </a>
 
                         <p>Facts, photos and educational resources about Earth's frozen regions</p>
@@ -520,10 +521,104 @@
                     <div class="in">
                         <img src="{% static 'images/greenland-image.jpg' %}" alt="greenland-image" style="width:220px;">
                         <a href="#" style="text-decoration: none">
-                            <h3>Greenland Today</h3>
+                            <h3>Exploration for Mineral Resources.</h3>
                         </a>
 
                         <p>Daily surface melt images from NASA data, and scientific analysis</p>
+                    </div>
+                </div>
+                <div class="sc">
+                    <h2 style="width:600px;margin-left:200px;font-size:30px;color:white;">Indian Scientific Expedition Programme</h2>
+    
+                    <div class="im">
+                        <div class="fl">
+                            <figure >
+                                <img src="{% static 'images/Antarctic_Image.jpg' %}" alt="Trulli"
+                                    style="border: 10px solid skyblue;border-radius:0px;width: 100px;height:100px;">
+                                <figcaption class="mmy2" style="font-size: 15px;color:white;"><a
+                                        href="/"
+                                        style="text-decoration:none;color:white;width: 120px;">ANTARCTIC
+                                    </a>
+                                        <ul class="class11">
+                                {% for research in researchScientists %}
+                        <li><a href="research_scientists_example/{{research.slug}}"
+                                style="text-decoration:none;color:white">{{research.title}}</a></li>
+    
+                        {% endfor %}
+                                </ul>
+                                    </figcaption>
+                                        
+                            </figure>
+                        </div>
+    
+                        <div class="fl">
+                            <figure>
+                                <img src="{% static 'images/arctic_Image.jpg' %}" alt="Trulli"
+                                    style="border: 10px solid skyblue;border-radius:0px;width: 100px;height:100px;">
+                                <figcaption class="mmy2" style="font-size: 15px;color:white;"><a href="/"
+                                        style="text-decoration:none;color:white;width: 120px;">ARCTIC</a>
+                                        <ul class="class11">
+                                            {% for researchGrant in researchGrants %}
+                        <li><a href="research_grants_example/{{researchGrant.slug}}"
+                                style="text-decoration:none;color:white">{{researchGrant.title}}</a></li>
+                        {% endfor %}
+                                </ul>
+                                    </figcaption>
+                            </figure>
+                        </div>
+    
+                        <div class="fl">
+                            <figure>
+                                <img src="{% static 'images/SoE_Image.jpg' %}" alt="Trulli"
+                                    style="border: 10px solid skyblue;border-radius:0px;width: 100px;height:100px;">
+                                <figcaption class="mmy2" style="font-size: 15px;color:white;"><a
+                                        href="/"
+                                        style="text-decoration:none;color:white;width: 120px;">SOUTHERN OCEAN</a>
+                                        <ul class="class11">
+                                            {% for scientificPublication in scientificPublications %}
+                        <li><a href="research_publications_example/{{scientificPublication.slug}}"
+                                style="text-decoration:none;color:white">{{scientificPublication.title}}</a></li>
+                        {% endfor %}
+                                            
+                                </ul>
+                                    </figcaption>
+                            </figure>
+                        </div>
+    
+                        <div class="fl">
+                            <figure>
+                                <img src="{% static 'images/Him_image.jpg' %}" alt="Trulli"
+                                    style="border: 10px solid skyblue;border-radius:0px;width: 100px;height:100px;">
+                                <figcaption class="mmy2" style="font-size: 15px;color:white;"><a href="/research_example/info_research"
+                                        style="text-decoration:none;color:white;width: 120px;">HIMALAYA</a>
+                                        <ul class="class11">
+                                            {% for informationResearch in informationResearchs %}
+                        <li><a href="research_information_example/{{informationResearch.slug}}"
+                                style="text-decoration:none;color:white">{{informationResearch.title}}</a></li>
+                        {% endfor %}
+                                </ul>
+                                    </figcaption>
+                            </figure>
+                        </div>
+    
+                        {% comment %} <div class="fl">
+                            <figure>
+                                <img src="{% static 'images/researcher-500.jpg' %}" alt="Trulli"
+                                    style="border: 10px solid skyblue;border-radius:0px;width: 100px;height:100px;">
+                                <figcaption class="mmy2" style="font-size: 15px;color:white;"><a
+                                        href="/research_example/research_expeditions"
+                                        style="text-decoration:none;color:white">NSIDC SCIENTIFIC EXPEDITIONS</a>
+                                        <ul class="class11">
+                                            {% for scientificExpedition in scientificExpeditions %}
+                        <li><a href="scientific_expeditions_example/{{scientificExpedition.slug}}"
+                                style="text-decoration:none;color:white">{{scientificExpedition.title}}</a></li>
+                        {% endfor %}
+                                </ul>
+                                </figcaption>
+                            </figure>
+                        </div> {% endcomment %}
+    
+                        
                     </div>
                 </div>
                 <div class="news">
@@ -736,7 +831,26 @@
                         </div>
                     </div>
                     <div class="down">
-                        <div class="i1">
+                        <div class="tags">
+                            <span class="link">Related Links : &nbsp&nbsp&nbsp&nbsp</span>
+                            
+                            <a href="">NIOT &nbsp|&nbsp</a>
+                            <a href="">INCOIS &nbsp|&nbsp</a>
+                            <a href="">NCCR &nbsp|&nbsp</a>
+                            <a href="">MOES &nbsp|&nbsp</a>
+                            <a href="">NIO &nbsp|&nbsp</a>
+                            <a href="">IMD &nbsp|&nbsp</a>
+                            <a href="">IITM &nbsp|&nbsp</a>
+                            <a href="">AFOPS &nbsp|&nbsp</a>
+                            <a href="">NCMRWF &nbsp|&nbsp</a>
+                            <a href="">NCESS &nbsp|&nbsp</a>
+                            <a href="">NCS &nbsp|&nbsp</a>
+                            <a href="">CMLRE&nbsp</a>
+                        </div>
+                        <div class="last">
+                            Contents of this website is published and managed by NCPOR , Government Of India. For any queries regarding this website please contact <a href="" class="link">Web Master .</a> 
+                        </div>
+                        {% comment %} <div class="i1">
                             <div class="d1">
                                 <div class="dd1">
                                     <img src="{% static 'images/icon.png' %}" alt="">
@@ -750,7 +864,7 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </div> {% endcomment %}
                     </div>
                 </div>
             </footer>
