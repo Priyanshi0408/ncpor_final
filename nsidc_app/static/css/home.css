@@ -228,10 +228,10 @@ body{background-color: rgb(129, 193, 233);}
     color: white;
 }
 .im{
-    margin-left: 50%;
+    /* margin-left: 50%; */
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    /* flex-direction: row; */
+    justify-content: space-around;
 }
 .sc .im .fl img{
     /* border: 2px solid red; */
@@ -519,4 +519,24 @@ float: right;
     margin-top:2px;
     margin-right:-300px;
     margin-left:30px;
+}
+.tags a{
+    color: #f5c32c;
+    text-decoration: none;
 } 
+.tags .link{
+    color:white;
+    margin-left:50px;
+}
+.tags{
+    margin-top: 20px;
+}
+.last{
+    margin-left:50px;
+    color:white;
+    margin-top: 20px;
+}
+.last .link{
+    color: #f5c32c;
+    text-decoration: none;
+}
