@@ -232,10 +232,10 @@ body{background-color: rgb(129, 193, 233);}
     color: white;
 }
 .im{
-    margin-left: 50%;
+    /* margin-left: 50%; */
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .sc .im .fl img{
     /* border: 2px solid red; */
