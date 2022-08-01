@@ -216,13 +216,13 @@ body{background-color: rgb(129, 193, 233);}
     background-color: #134576;
     text-align: center;
 }
-.sc h2{
+/* .sc h2{
     margin:auto;
     color: rgba(255, 250, 250, 0.674);
     padding: 10px;
     width: 900px;
     text-align: right;
-}
+} */
 
 .sc h2:hover{
     color: white;
