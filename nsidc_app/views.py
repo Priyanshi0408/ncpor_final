@@ -633,7 +633,7 @@ def atmos(request,slug):
         'se': scientificExpeditions,
         'po': polar_res,
     }
-    return render(request, 'base.html', context)
+    return render(request, 'our_research/atmos.html', context)
 
 def geoscience(request,slug):
     abouts = about.objects.all()
