@@ -171,5 +171,50 @@ class careerclass(models.Model):
 #         return self.title
 #     (drop-dowm-->dropdowm through cms / made by priyanshi)
 
-###########tendor page ###############
+class polarscience(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
 
+    def __str__(self):
+        return self.title
+
+class atmosphere(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title
+
+class geosciences(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title
+
+class polaroceans(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title
+
+class polarenvironments(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title
+
+class mineralresources(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title

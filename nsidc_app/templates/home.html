@@ -219,7 +219,26 @@
     text-decoration: none;
 }
 
-
+.drp2:hover .class11 a{
+    font-size:20px;
+    {% comment %} border:2px solid black; {% endcomment %}
+    {% comment %} margin-top:50px; {% endcomment %}
+    
+}
+.drp2:hover .class11 {
+    display: block;
+    margin-left:-50px;
+    margin-top:15px;
+    
+    font-size:20px;
+    {% comment %} width:0px; {% endcomment %}
+    {% comment %} padding:0px 50px; {% endcomment %}
+    background-color: steelblue;
+    {% comment %} border:2px solid red; {% endcomment %}
+    padding:40px;
+    padding-top:0px;
+    padding-bottom:0px;
+}
 </style>
 
 </head>
@@ -504,9 +523,17 @@
                 <div class="ev">
                     <div class="in">
                         <img src="{% static 'images/asina.jpg' %}" alt="asina" style="width:220px;">
+                        <div class = "drp2">
                         <a href="#" style="text-decoration: none">
                             <h3>Polar Science and Cryosphere</h3>
+                            <ul class="class11">
+                                {% for polar in po %}
+                        <li><a href="polarscience/{{polar.slug}}"
+                                style="text-decoration:none;color:white">{{polar.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                    </div>
                         <p>Scientific analysis of Arctic sea ice conditions plus daily images</p>
                     </div>
                     <div class="in">
