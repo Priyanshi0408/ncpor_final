@@ -10,7 +10,7 @@ from nsidc_app.models import enquiryclass,corigendumclass
 from nsidc_app.models import careerclass
 from nsidc_app.models import scientificPublication, research_example_down_sp
 from nsidc_app.models import scientificExpedition,research_example_down_scientists, research_example_down_resgran
-
+from nsidc_app.models import polarenvironments,polaroceans,polarscience,mineralresources,geosciences,atmosphere
 
 # Register your models here.
 
@@ -42,7 +42,12 @@ admin.site.register(procurementclass)
 admin.site.register(gemclass)
 admin.site.register(enquiryclass)
 admin.site.register(careerclass)
-
+admin.site.register(polarenvironments,BlogAdmin)
+admin.site.register(polaroceans,BlogAdmin)
+admin.site.register(polarscience,BlogAdmin)
+admin.site.register(geosciences,BlogAdmin)
+admin.site.register(atmosphere,BlogAdmin)
+admin.site.register(mineralresources,BlogAdmin)
 
 
 # admin.site.register(research_drop,BlogAdmin)(drop-dowm-->dropdowm through cms / made by priyanshi)

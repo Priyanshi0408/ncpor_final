@@ -46,4 +46,12 @@ urlpatterns = [
     path("webMail", views.webMail, name="webMail"),
     path("news", views.news, name="news"),
     
+
+    path("polarscience/<str:slug>",views.polar_science,name= 'our_research'),
+    path("atmosphere/<str:slug>",views.polar_science,name= 'our_research'),
+    path("geoscience/<str:slug>",views.polar_science,name= 'our_research'),
+    path("polaroceans/<str:slug>",views.polar_science,name= 'our_research'),
+    path("polarenv/<str:slug>",views.polar_science,name= 'our_research'),
+    path("mineral/<str:slug>",views.polar_science,name= 'our_research'),
+    
 ]

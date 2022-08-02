@@ -13,7 +13,7 @@ from nsidc_app.models import enquiryclass,corigendumclass
 from nsidc_app.models import careerclass
 from nsidc_app.models import scientificPublication, research_example_down_sp
 from nsidc_app.models import scientificExpedition, research_example_down_scientists, research_example_down_resgran
-
+from nsidc_app.models import polarenvironments,polaroceans,polarscience,mineralresources,geosciences,atmosphere
 
 # Create your views here.
 
@@ -530,3 +530,121 @@ def news(request):
         'se': scientificExpeditions
     }
     return render(request, "news.html", context)
+
+
+# our research drop down
+
+def polar_science(request,slug):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    polar_res = polarscience.objects.filter(slug=slug).first()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions,
+        'po': polar_res,
+    }
+    return render(request, 'our_research/polarscience.html', context)
+
+def polar_oceans(request,slug):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    polar_res = polaroceans.objects.filter(slug=slug).first()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions,
+        'po': polar_res,
+    }
+    return render(request, 'our_research/polaroceans.html', context)
+
+def polar_env(request,slug):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    polar_res = polarenvironments.objects.filter(slug=slug).first()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions,
+        'po': polar_res,
+    }
+    return render(request, 'our_research/polarenv.html', context)
+
+def mineral_resources(request,slug):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    polar_res = mineralresources.objects.filter(slug=slug).first()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions,
+        'po': polar_res,
+    }
+    return render(request, 'our_research/mineralresources.html', context)
+
+def atmos(request,slug):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    polar_res = atmosphere.objects.filter(slug=slug).first()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions,
+        'po': polar_res,
+    }
+    return render(request, 'base.html', context)
+
+def geoscience(request,slug):
+    abouts = about.objects.all()
+    researchScientists = researchScientist.objects.all()
+    researchGrants = researchGrant.objects.all()
+    researchPublications = scientificPublication.objects.all()
+    researchInformation = informationResearch.objects.all()
+    scientificExpeditions = scientificExpedition.objects.all()
+    polar_res = geosciences.objects.filter(slug=slug).first()
+    context = {
+        'ab': abouts,
+        'rs': researchScientists,
+        'rg': researchGrants,
+        'rp': researchPublications,
+        'ri': researchInformation,
+        'se': scientificExpeditions,
+        'po': polar_res,
+    }
+    return render(request, 'our_research/geoscience.html', context)
+
