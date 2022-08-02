@@ -30,9 +30,10 @@ urlpatterns = [
 
     # path("research_example",views.research_example,name = 'research_example'),
     # path("research_example/research_scientists",views.res_exam_rese_sct,name="research"),
-    path("research/research_example/<str:slug>",views.research_exam_slug,name = 'research_example'),
-    path("research/research_grants/<str:slug>",views.research_exam_resgr,name = 'research_example'),
-    path("research/research_down_publi/<str:slug>",views.research_exam_public,name = 'research_example'),
+    path("research/research_example/<str:slug>",views.Antarctic,name = 'research_example'),
+    path("research/research_grants/<str:slug>",views.Arctic,name = 'research_example'),
+    path("research/research_down_publi/<str:slug>",views.Southern_ocean,name = 'research_example'),
+    path("research/research_down_publi/<str:slug>",views.Himalaya,name = 'research_example'),
     path("tender/", views.tender, name="tender"),
     path("careers", views.careers, name="career"),
     path("careerArchive", views.careerArchive, name="career"),

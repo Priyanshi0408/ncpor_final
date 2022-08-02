@@ -630,7 +630,7 @@
                                         style="text-decoration:none;color:white;width: 120px;">ANTARCTIC
                                     </a>
                                         <ul class="class11">
-                                {% for research in researchScientists %}
+                                {% for research in redrg %}
                         <li><a href="research_scientists_example/{{research.slug}}"
                                 style="text-decoration:none;color:white">{{research.title}}</a></li>
     
@@ -648,8 +648,8 @@
                                 <figcaption class="mmy2" style="font-size: 15px;color:white;"><a href="/"
                                         style="text-decoration:none;color:white;width: 120px;">ARCTIC</a>
                                         <ul class="class11">
-                                            {% for researchGrant in researchGrants %}
-                        <li><a href="research_grants_example/{{researchGrant.slug}}"
+                                            {% for researchGrant in down_publ %}
+                        <li><a href="research/research_example/{{researchGrant.slug}}"
                                 style="text-decoration:none;color:white">{{researchGrant.title}}</a></li>
                         {% endfor %}
                                 </ul>
@@ -665,7 +665,7 @@
                                         href="/"
                                         style="text-decoration:none;color:white;width: 120px;">SOUTHERN OCEAN</a>
                                         <ul class="class11">
-                                            {% for scientificPublication in scientificPublications %}
+                                            {% for scientificPublication in redsc %}
                         <li><a href="research_publications_example/{{scientificPublication.slug}}"
                                 style="text-decoration:none;color:white">{{scientificPublication.title}}</a></li>
                         {% endfor %}
@@ -682,7 +682,7 @@
                                 <figcaption class="mmy2" style="font-size: 15px;color:white;"><a href="/research_example/info_research"
                                         style="text-decoration:none;color:white;width: 120px;">HIMALAYA</a>
                                         <ul class="class11">
-                                            {% for informationResearch in informationResearchs %}
+                                            {% for informationResearch in him %}
                         <li><a href="research_information_example/{{informationResearch.slug}}"
                                 style="text-decoration:none;color:white">{{informationResearch.title}}</a></li>
                         {% endfor %}
@@ -949,7 +949,7 @@
                             <a href="">NCS &nbsp|&nbsp</a>
                             <a href="">CMLRE&nbsp</a>
                         </div>
-                        <div class="last">
+                        <div class="last" style="padding-bottom:20px;">
                             Contents of this website is published and managed by NCPOR , Government Of India. For any queries regarding this website please contact <a href="" class="link">Web Master .</a> 
                         </div>
                         {% comment %} <div class="i1">
