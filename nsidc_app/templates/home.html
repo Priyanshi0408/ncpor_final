@@ -218,27 +218,25 @@
     color: #f5c32c;
     text-decoration: none;
 }
-
+.drp2 {
+    position: relative;
+}
 .drp2:hover .class11 a{
     font-size:20px;
-    {% comment %} border:2px solid black; {% endcomment %}
-    {% comment %} margin-top:50px; {% endcomment %}
+    margin-top:50px;
     
 }
 .drp2:hover .class11 {
     display: block;
-    margin-left:-50px;
-    margin-top:15px;
-    
+    margin-left:45px;
+    margin-top:-20px;
     font-size:20px;
-    {% comment %} width:0px; {% endcomment %}
-    {% comment %} padding:0px 50px; {% endcomment %}
+    padding:0px 30px;
     background-color: steelblue;
-    {% comment %} border:2px solid red; {% endcomment %}
-    padding:40px;
-    padding-top:0px;
-    padding-bottom:0px;
+    width: 100px;
+    text-align: center;
 }
+
 </style>
 
 </head>
@@ -523,54 +521,94 @@
                 <div class="ev">
                     <div class="in">
                         <img src="{% static 'images/asina.jpg' %}" alt="asina" style="width:220px;">
-                        <div class = "drp2">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Polar Science and Cryosphere</h3>
                             <ul class="class11">
-                                {% for polar in po %}
+                                {% for polar in polsc %}
                         <li><a href="polarscience/{{polar.slug}}"
                                 style="text-decoration:none;color:white">{{polar.title}}</a></li>
                         {% endfor %}
                                 </ul>
                         </a>
-                    </div>
+                        </div>
                         <p>Scientific analysis of Arctic sea ice conditions plus daily images</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/eloka-image(1).jpg' %}" alt="eloka-image" style="width:220px;">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Atmosphere, Ice and Climate</h3>
+                            <ul class="class11">
+                                {% for a in am %}
+                        <li><a href="polarscience/{{a.slug}}"
+                                style="text-decoration:none;color:white">{{a.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                        </div>
                         <p>Working together to understand the changing Arctic system</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/snow-today.jpg' %}" alt="snow-today" style="width:220px;">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Geosciences</h3>
+                            <ul class="class11">
+                                {% for gesc in gsc %}
+                        <li><a href="polarscience/{{gesc.slug}}"
+                                style="text-decoration:none;color:white">{{gesc.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                    </div>
                         <p>Scientific analysis of snow conditions in the Western United States plus daily images</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/daac-image.jpg' %}" alt="daac-image" style="width:220px;">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Polar Oceans / Oceanography</h3>
+                            <ul class="class11">
+                                {% for polaroc in poloc %}
+                        <li><a href="polarscience/{{polaroc.slug}}"
+                                style="text-decoration:none;color:white">{{polaroc.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                        </div>
 
                         <p>NASA Earth science data on snow, ice, cryosphere, and climate</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/cryosphere-image.jpg' %}" alt="cryosphere" style="width:220px;">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Polar Environments, Atmosphere</h3>
+                            <ul class="class11">
+                                {% for polaren in polen %}
+                        <li><a href="polarscience/{{polaren.slug}}"
+                                style="text-decoration:none;color:white">{{polaren.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                        </div>
 
                         <p>Facts, photos and educational resources about Earth's frozen regions</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/greenland-image.jpg' %}" alt="greenland-image" style="width:220px;">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Exploration for Mineral Resources.</h3>
+                            <ul class="class11">
+                                {% for mine in mre %}
+                        <li><a href="polarscience/{{mine.slug}}"
+                                style="text-decoration:none;color:white">{{mine.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                        </div>
 
                         <p>Daily surface melt images from NASA data, and scientific analysis</p>
                     </div>

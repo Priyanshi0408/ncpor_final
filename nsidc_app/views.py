@@ -28,8 +28,14 @@ def home(request):
     scientificPublications = scientificPublication.objects.all()
     scientificExpeditions = scientificExpedition.objects.all()
     research_example_down_scientist = research_example_down_scientists.objects.all()
+    polarenv = polarenvironments.objects.all()
+    polaroc = polaroceans.objects.all()
+    polarsc = polarscience.objects.all()
+    minre = mineralresources.objects.all()
+    geosc = geosciences.objects.all()
+    atm = atmosphere.objects.all()
     context = {'abouts': abouts, 'informationResearchs': informationResearchs, 'researchScientists': researchScientists, 'researchGrants': researchGrants, 'scientificPublications': scientificPublications,
-               'scientificExpeditions': scientificExpeditions, 'redsc': research_example_down_scientist, 'redrg': research_example_down_resgr, "down_publ": research_example_down_sps}
+               'scientificExpeditions': scientificExpeditions, 'redsc': research_example_down_scientist, 'redrg': research_example_down_resgr, "down_publ": research_example_down_sps, 'polen':polarenv, 'poloc':polaroc, 'polsc':polarsc, 'mre':minre, 'gsc':geosc, 'am':atm}
     return render(request, 'home.html', context)
 # def about_jobs(request):
 #     return HttpResponse("this is home page")
