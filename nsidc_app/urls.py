@@ -30,9 +30,10 @@ urlpatterns = [
 
     # path("research_example",views.research_example,name = 'research_example'),
     # path("research_example/research_scientists",views.res_exam_rese_sct,name="research"),
-    path("research/research_example/<str:slug>",views.research_exam_slug,name = 'research_example'),
-    path("research/research_grants/<str:slug>",views.research_exam_resgr,name = 'research_example'),
-    path("research/research_down_publi/<str:slug>",views.research_exam_public,name = 'research_example'),
+    path("research/research_example/<str:slug>",views.Antarctic,name = 'research_example'),
+    path("research/research_grants/<str:slug>",views.Arctic,name = 'research_example'),
+    path("research/research_down_publi/<str:slug>",views.Southern_ocean,name = 'research_example'),
+    path("research/research_down_publi/<str:slug>",views.Himalaya,name = 'research_example'),
     path("tender/", views.tender, name="tender"),
     path("careers", views.careers, name="career"),
     path("careerArchive", views.careerArchive, name="career"),
@@ -45,5 +46,13 @@ urlpatterns = [
     path("tender/archive", views.tenderArchive, name="Tender"),
     path("webMail", views.webMail, name="webMail"),
     path("news", views.news, name="news"),
+    
+
+    path("polarscience/<str:slug>",views.polar_science,name= 'our_research'),
+    path("atmosphere/<str:slug>",views.polar_science,name= 'our_research'),
+    path("geoscience/<str:slug>",views.polar_science,name= 'our_research'),
+    path("polaroceans/<str:slug>",views.polar_science,name= 'our_research'),
+    path("polarenv/<str:slug>",views.polar_science,name= 'our_research'),
+    path("mineral/<str:slug>",views.polar_science,name= 'our_research'),
     
 ]

@@ -55,7 +55,7 @@ class scientificExpedition(models.Model):
     def __str__(self):
         return self.title
 
-class research_example_down_scientists(models.Model):
+class antarctic(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     slug = models.CharField(max_length=300)
@@ -63,7 +63,7 @@ class research_example_down_scientists(models.Model):
     def __str__(self):
         return self.title
 
-class research_example_down_resgran(models.Model):
+class arctic(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     slug = models.CharField(max_length=300)
@@ -71,7 +71,15 @@ class research_example_down_resgran(models.Model):
     def __str__(self):
         return self.title
 
-class research_example_down_sp(models.Model):
+class southern_ocean(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title
+
+class himalaya(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     slug = models.CharField(max_length=300)
@@ -171,5 +179,50 @@ class careerclass(models.Model):
 #         return self.title
 #     (drop-dowm-->dropdowm through cms / made by priyanshi)
 
-###########tendor page ###############
+class polarscience(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
 
+    def __str__(self):
+        return self.title
+
+class atmosphere(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title
+
+class geosciences(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title
+
+class polaroceans(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title
+
+class polarenvironments(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title
+
+class mineralresources(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.title

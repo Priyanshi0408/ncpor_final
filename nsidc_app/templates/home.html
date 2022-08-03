@@ -218,7 +218,28 @@
     color: #f5c32c;
     text-decoration: none;
 }
-
+.drp2 {
+    position: relative;
+}
+.drp2:hover .class11 a{
+    font-size:20px;
+    margin-top:50px;
+    
+}
+.drp2:hover .class11 {
+    display: block;
+    margin-left:45px;
+    margin-top:-20px;
+    font-size:20px;
+    padding:0px 30px;
+    background-color: steelblue;
+    width: 100px;
+    text-align: center;
+}
+.link1{
+    color: white;
+    margin-right: 10px;
+}
 
 </style>
 
@@ -442,7 +463,7 @@
                 {% comment %} </ul>  {% endcomment %}
             </div>
 
-            <div class="back" id="slideshow">
+            <div class="back" id="slideshow" >  
                 <img src="{% static 'images/image1.jpg' %}" alt="image1">
                 <div class="container">
                     <h2>IceFlow: mapping cryospheric elevation changes</h2>
@@ -504,46 +525,94 @@
                 <div class="ev">
                     <div class="in">
                         <img src="{% static 'images/asina.jpg' %}" alt="asina" style="width:220px;">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Polar Science and Cryosphere</h3>
+                            <ul class="class11">
+                                {% for polar in polsc %}
+                        <li><a href="polarscience/{{polar.slug}}"
+                                style="text-decoration:none;color:white">{{polar.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                        </div>
                         <p>Scientific analysis of Arctic sea ice conditions plus daily images</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/eloka-image(1).jpg' %}" alt="eloka-image" style="width:220px;">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Atmosphere, Ice and Climate</h3>
+                            <ul class="class11">
+                                {% for a in am %}
+                        <li><a href="polarscience/{{a.slug}}"
+                                style="text-decoration:none;color:white">{{a.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                        </div>
                         <p>Working together to understand the changing Arctic system</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/snow-today.jpg' %}" alt="snow-today" style="width:220px;">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Geosciences</h3>
+                            <ul class="class11">
+                                {% for gesc in gsc %}
+                        <li><a href="polarscience/{{gesc.slug}}"
+                                style="text-decoration:none;color:white">{{gesc.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                    </div>
                         <p>Scientific analysis of snow conditions in the Western United States plus daily images</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/daac-image.jpg' %}" alt="daac-image" style="width:220px;">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Polar Oceans / Oceanography</h3>
+                            <ul class="class11">
+                                {% for polaroc in poloc %}
+                        <li><a href="polarscience/{{polaroc.slug}}"
+                                style="text-decoration:none;color:white">{{polaroc.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                        </div>
 
                         <p>NASA Earth science data on snow, ice, cryosphere, and climate</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/cryosphere-image.jpg' %}" alt="cryosphere" style="width:220px;">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Polar Environments, Atmosphere</h3>
+                            <ul class="class11">
+                                {% for polaren in polen %}
+                        <li><a href="polarscience/{{polaren.slug}}"
+                                style="text-decoration:none;color:white">{{polaren.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                        </div>
 
                         <p>Facts, photos and educational resources about Earth's frozen regions</p>
                     </div>
                     <div class="in">
                         <img src="{% static 'images/greenland-image.jpg' %}" alt="greenland-image" style="width:220px;">
+                        <div class = "drp2 newDrop">
                         <a href="#" style="text-decoration: none">
                             <h3>Exploration for Mineral Resources.</h3>
+                            <ul class="class11">
+                                {% for mine in mre %}
+                        <li><a href="polarscience/{{mine.slug}}"
+                                style="text-decoration:none;color:white">{{mine.title}}</a></li>
+                        {% endfor %}
+                                </ul>
                         </a>
+                        </div>
 
                         <p>Daily surface melt images from NASA data, and scientific analysis</p>
                     </div>
@@ -561,7 +630,7 @@
                                         style="text-decoration:none;color:white;width: 120px;">ANTARCTIC
                                     </a>
                                         <ul class="class11">
-                                {% for research in researchScientists %}
+                                {% for research in redrg %}
                         <li><a href="research_scientists_example/{{research.slug}}"
                                 style="text-decoration:none;color:white">{{research.title}}</a></li>
     
@@ -579,8 +648,8 @@
                                 <figcaption class="mmy2" style="font-size: 15px;color:white;"><a href="/"
                                         style="text-decoration:none;color:white;width: 120px;">ARCTIC</a>
                                         <ul class="class11">
-                                            {% for researchGrant in researchGrants %}
-                        <li><a href="research_grants_example/{{researchGrant.slug}}"
+                                            {% for researchGrant in down_publ %}
+                        <li><a href="research/research_example/{{researchGrant.slug}}"
                                 style="text-decoration:none;color:white">{{researchGrant.title}}</a></li>
                         {% endfor %}
                                 </ul>
@@ -596,7 +665,7 @@
                                         href="/"
                                         style="text-decoration:none;color:white;width: 120px;">SOUTHERN OCEAN</a>
                                         <ul class="class11">
-                                            {% for scientificPublication in scientificPublications %}
+                                            {% for scientificPublication in redsc %}
                         <li><a href="research_publications_example/{{scientificPublication.slug}}"
                                 style="text-decoration:none;color:white">{{scientificPublication.title}}</a></li>
                         {% endfor %}
@@ -613,7 +682,7 @@
                                 <figcaption class="mmy2" style="font-size: 15px;color:white;"><a href="/research_example/info_research"
                                         style="text-decoration:none;color:white;width: 120px;">HIMALAYA</a>
                                         <ul class="class11">
-                                            {% for informationResearch in informationResearchs %}
+                                            {% for informationResearch in him %}
                         <li><a href="research_information_example/{{informationResearch.slug}}"
                                 style="text-decoration:none;color:white">{{informationResearch.title}}</a></li>
                         {% endfor %}
@@ -852,6 +921,18 @@
                         </div>
                     </div>
                     <div class="down">
+                        <div class="socmed tags">
+                            <span style="color:white; margin-left:50px;">Social Media:</span>
+                            <span class="link1">&nbsp&nbspFacebook</span>
+                            <a href="https://www.facebook.com/ncpor.goa/"  style="margin-top: 4px;">
+                                <img alt="Facebook" src="{% static 'images/f2.png'%}" style="margin-right: 2px; "></a>
+                            <span class="link1">|&nbsp&nbspTwitter</span>
+                            <a href="https://twitter.com/ncaor_goa">
+                                <img alt="Twitter" src="{% static 'images/t2.png'%}"></a>
+                            <span class="link1">|&nbsp&nbspYouTube</span>
+                            <a href="https://www.youtube.com/channel/UC1h2xM-VmB1opmtTa4IreQQ">
+                                <img alt="Twitter" src="{% static 'images/YouTube-icon.png'%}" style="height:22px; width:25px;"></a>
+                        </div>
                         <div class="tags">
                             <span class="link">Related Links : &nbsp&nbsp&nbsp&nbsp</span>
                             
@@ -868,7 +949,7 @@
                             <a href="">NCS &nbsp|&nbsp</a>
                             <a href="">CMLRE&nbsp</a>
                         </div>
-                        <div class="last">
+                        <div class="last" style="padding-bottom:20px;">
                             Contents of this website is published and managed by NCPOR , Government Of India. For any queries regarding this website please contact <a href="" class="link">Web Master .</a> 
                         </div>
                         {% comment %} <div class="i1">
@@ -892,5 +973,4 @@
         </div>
     </div>
 </body>
-
 </html>
