@@ -226,3 +226,21 @@ class mineralresources(models.Model):
 
     def __str__(self):
         return self.title
+
+class newsclass(models.Model):
+    sno = models.CharField(max_length=300)
+    description=models.CharField(max_length=300)
+    content = models.TextField()
+    closingdate=models.DateField()
+
+    def __str__(self):
+        return self.sno
+
+class eventclass(models.Model):
+    sno = models.CharField(max_length=300)
+    description=models.CharField(max_length=300)
+    content = models.TextField()
+    closingdate=models.DateField()
+
+    def __str__(self):
+        return self.sno
