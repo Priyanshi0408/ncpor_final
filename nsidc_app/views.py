@@ -659,22 +659,20 @@ def geoscience(request,slug):
     }
     return render(request, 'our_research/geoscience.html', context)
 
-def dataCenter(request, slug):
+def dataCenter(request):
     abouts = about.objects.all()
     researchScientists = researchScientist.objects.all()
     researchGrants = researchGrant.objects.all()
     researchPublications = scientificPublication.objects.all()
     researchInformation = informationResearch.objects.all()
     scientificExpeditions = scientificExpedition.objects.all()
-    polar_res = geosciences.objects.filter(slug=slug).first()
     context = {
         'ab': abouts,
         'rs': researchScientists,
         'rg': researchGrants,
         'rp': researchPublications,
         'ri': researchInformation,
-        'se': scientificExpeditions,
-        'po': polar_res,
+        'se': scientificExpeditions
     }
     return render(request, 'DataCenter.html', context)
 
