@@ -56,5 +56,6 @@ urlpatterns = [
     path("mineral/<str:slug>",views.polar_science,name= 'our_research'),
     
     path("dataCenter",views.dataCenter,name= 'dataCenter'),
-    
+    path("newsarchive",views.news_archive,name='news'),
+    path("eventsarchive",views.event_archive,name='news')
 ]
