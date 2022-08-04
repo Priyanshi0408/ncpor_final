@@ -55,4 +55,6 @@ urlpatterns = [
     path("polarenv/<str:slug>",views.polar_science,name= 'our_research'),
     path("mineral/<str:slug>",views.polar_science,name= 'our_research'),
     
+    path("dataCenter",views.dataCenter,name= 'dataCenter'),
+    
 ]
