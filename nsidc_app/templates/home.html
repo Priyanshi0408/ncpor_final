@@ -24,13 +24,17 @@
     <title>NCPOR</title>
     <style>
         .bar:hover .class1 {
-            display: flex;
-            margin-left: -800px;
-            width: 1600px;
+            /* display: flex; */
+            margin-left: -50px;
+            width: 150px;
             padding-top: 0px;
             padding-bottom: 0px;
             background-color: steelblue;
             margin-top: -13px;
+            z-index: 3;
+        }
+        .class1 li+li{
+            padding: 1%;
         }
         .bar:hover .class2 {
             display: flex;
@@ -74,7 +78,7 @@
             width: auto;
             padding-top: 0px;
             padding-bottom: 0px;
-            background-color: steelblue;
+            background-color:#032549;
         }
         {% comment %} .class10 {
             background-color: steelblue;
@@ -470,7 +474,7 @@
                     {% for about in abouts %}
 
                     <li><a href = "/about_example/{{about.slug}}" style="text-decoration:none;color:white">{{about.title}}</a></li>
-
+                        <div class="bor" style="width: 100%; background-color:aquamarine; height:1px;"></div>
                     {% endfor %}
                 </ul>
             </li>
@@ -1052,7 +1056,7 @@
                                     {% comment %} <li><a href="#">Newsroom</a></li> {% endcomment %}
                                 </ul>
                             </div>
-                            <div class="col">
+                            <!-- <div class="col">
 
                                 Learn About Snow and Ice
 
@@ -1065,7 +1069,7 @@
                                     <li><a href="#">All About Sea Ice</a></li>
                                     <li><a href="#">Arctic Climatology - A Primer</a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                             <div class="col">
 
                                 Get Help
